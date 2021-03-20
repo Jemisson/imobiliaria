@@ -1,0 +1,5 @@
+<% @resp['buildings'].each do |r| %>
+  <h1><%= r['name'] %></h1>
+  <p><%= r %></p> <br>
+  <img src="<%= r['default_image']['200x140'] %>" alt="">
+<% end %>
