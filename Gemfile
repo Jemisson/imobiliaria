@@ -27,8 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'jquery-rails'
 # Like a modern code version of the mythical beast with 100 serpent heads, Typhoeus runs HTTP requests in parallel while cleanly encapsulating handling logic.
 gem "typhoeus"
+# Devise 4.0 works with Rails 4.1 onwards. Add the following line to your Gemfile:
+gem 'devise'
 
 
 # Use ActiveStorage variant

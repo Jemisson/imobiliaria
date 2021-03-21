@@ -1,5 +1,15 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<% if current_user %>
+  <span><%= current_user.email %></span>
+<% end %>
+
 <% @resp['buildings'].each do |r| %>
   <h1><%= r['name'] %></h1>
-  <p><%= r %></p> <br>
-  <img src="<%= r['default_image']['200x140'] %>" alt="">
+  <p><%#= r %></p> <br>
+  <img src="<%#= r['default_image']['200x140'] %>" alt="">
+
+  <%= link_to bookmark_text(r['bookmark']), site_bookmarks_update_path(bookmark: r['id']), id:"bookmark_link#{r['id']}", remote: true %>
+
 <% end %>

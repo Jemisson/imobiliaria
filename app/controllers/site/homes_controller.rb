@@ -1,5 +1,5 @@
 class Site::HomesController < ApplicationController
   def index
-      @resp =  Home.authenticate
+      @resp =  Home.authentication
   end
 end
