@@ -3,13 +3,16 @@
 
 <% if current_user %>
   <span><%= current_user.email %></span>
+  <%= link_to "Sair", destroy_user_session_path, method: :delete %>
 <% end %>
 
-<% @resp['buildings'].each do |r| %>
+<% @resp.each do |r| %>
   <h1><%= r['name'] %></h1>
-  <p><%#= r %></p> <br>
+  <p><%= r %></p> <br>
   <img src="<%#= r['default_image']['200x140'] %>" alt="">
 
-  <%= link_to bookmark_text(r['bookmark']), site_bookmarks_update_path(bookmark: r['id']), id:"bookmark_link#{r['id']}", remote: true %>
+  <%= link_to bookmark_text(r['bookmark']), site_bookmarks_update_path(bookmark: r['id']), id:"bookmark_link#{r['id']}", remote: user_signed_in? %>
 
 <% end %>
+
+<%= will_paginate(@resp) %>

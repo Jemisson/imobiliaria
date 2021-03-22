@@ -12,9 +12,9 @@ class Site::BookmarksController < ApplicationController
     end
 
     respond_to do |format|
+      format.html {redirect_to :root}
       format.js {}
     end
   end
-
 
 end

@@ -32,8 +32,7 @@ gem 'jquery-rails'
 gem "typhoeus"
 # Devise 4.0 works with Rails 4.1 onwards. Add the following line to your Gemfile:
 gem 'devise'
-
-
+gem 'will_paginate'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
 
   namespace :site do
@@ -8,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   root "site/homes#index"
+
 end
