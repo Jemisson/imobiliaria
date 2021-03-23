@@ -13,7 +13,7 @@ class Home < ApplicationRecord
       buildings.push(r)
     end
 
-    response = buildings.paginate(page: page, per_page: 2)
+    response = buildings.paginate(page: page, per_page: 6)
   end
 
 end

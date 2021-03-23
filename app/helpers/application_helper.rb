@@ -1,5 +1,5 @@
 module ApplicationHelper
   def bookmark_text(value)
-    return value ? "remover" : "favoritar"
+    return value ? true : false
   end
 end

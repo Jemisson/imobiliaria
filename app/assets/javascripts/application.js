@@ -13,5 +13,17 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load',function(){
+
+  $('.carousel').carousel()
+
+  $('#bookmark_carousel .carousel-item:first-child').addClass('active');
+
+  $('.previous_page').text('Anterior');
+  $('.next_page').text('Próximo');
+
+})

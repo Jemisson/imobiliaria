@@ -1,18 +1,79 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= render partial: "site/shared/carouselTop" %>
 
-<% if current_user %>
-  <span><%= current_user.email %></span>
-  <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-<% end %>
+  <div class="home-background clearfix">
 
-<% @resp.each do |r| %>
-  <h1><%= r['name'] %></h1>
-  <p><%= r %></p> <br>
-  <img src="<%#= r['default_image']['200x140'] %>" alt="">
+    <div class="container clearfix">
 
-  <%= link_to bookmark_text(r['bookmark']), site_bookmarks_update_path(bookmark: r['id']), id:"bookmark_link#{r['id']}", remote: user_signed_in? %>
+      <div class="col-lg-12 mg-top clearfix">
 
-<% end %>
+        <h1 class="home-title">Imóveis</h1>
 
-<%= will_paginate(@resp) %>
+        <% @resp.each do |r| %>
+
+
+            <div class="buildings clearfix">
+
+                <div class="card">
+
+                  <div class="card-body home-bookmark-star">
+
+                    <%= link_to site_bookmarks_update_path(bookmark: r['id']), id:"bookmark_link#{r['id']}", remote: user_signed_in? do %>
+
+                       <% if bookmark_text(r['bookmark']) %>
+
+                         <i class="fa fa-star home-star"></i>
+
+                       <% else %>
+
+                          <i class='fa fa-star home-star-unmark'></i>
+
+                       <% end %>
+
+                    <% end %>
+
+                  </div>
+
+                  <span class="home-ticket"><%= r['finality'] %></span>
+
+                  <did class="img-card">
+                    <img class="card-img-top" src="<%= r['default_image']['520x280'] %>" alt="Card image cap">
+                  </did>
+
+                    <%= link_to building_path(r), class:"" do %>
+
+                      <div class="card-body">
+
+                          <h5 class="card-title"><b><%= r['name'] %></b></h5>
+                          <span class="card-text"><%= r['address']['area'] %>, <%= r['address']['city'] %> - <%= r['address']['state'] %></span>
+
+                      </div>
+
+                      <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                          <span class="home-block-2 no-padding">Área: <%= r['min_area'] %></span>
+                          <span class="home-block-2 no-padding">Imóvel <%= r['status'] %></span>
+                        </li>
+
+                        <li class="list-group-item">
+                          <span class="home-block-3 no-padding"> <i class="fa fa-bed"></i> <%= r['min_bedrooms'] %></span>
+                          <span class="home-block-3 no-padding"> <i class="fa fa-bath"></i> <%= r['min_bathrooms'] %></span>
+                          <span class="home-block-3 no-padding"> <i class="fa fa-car"></i> <%= r['min_parking'] %></span>
+                        </li>
+
+                      </ul>
+
+                  <% end %>
+
+                </div>
+            </div>
+        <% end %>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <%= will_paginate(@resp) %>
+    </div>
+
+  </div>

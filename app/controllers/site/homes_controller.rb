@@ -6,8 +6,13 @@ class Site::HomesController < ApplicationController
       if user_signed_in?
         resp = Bookmark.mount_json(resp)
       end
-      
+
       @resp = Home.paginate_hash(resp, params[:page])
+  end
+
+  def building
+    
+
   end
 
 end

@@ -1,1 +1,7 @@
-$("#bookmark_link<%= params[:bookmark] %>").text("<%= bookmark_text(@bookmark_exists) %>");
+$("#bookmark_link<%= params[:bookmark] %> .fa-star ").remove();
+
+<% if bookmark_text(@bookmark_exists) %>
+  $("#bookmark_link<%= params[:bookmark] %>").append("<i class='fa fa-star home-star'></i>");
+<% else  %>
+  $("#bookmark_link<%= params[:bookmark] %>").append("<i class='fa fa-star home-star-unmark'></i>");
+<% end %>
