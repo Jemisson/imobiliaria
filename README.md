@@ -30,5 +30,7 @@ Para executar este projeto em sua máquina, siga os passos abaixo:
       
       config/database.yml
 
+
+No site você vai encontrar na página principal as informações dos empreeendimentos disponíveis. Casa empreeendimento possui um ícone de estrela que representa a marcação de favorito, clique sobre ela para favoritar. Se você não estiver autenticado no sistema, será reditrecionado para a página de cadastro, caso contrários irá para a página de autenticação. Uma vez autenticado o sistema permitirá a marcação dos favoritos, clique cobre a estrela para favoritar e clique novamente para desfavoritar um empreendimento. No menu superior está disponível a opção 'favoritos', clicando sobre ela será direcionado para uma nova página composta apenas pelos favoritos marcados.
 _____
 Criado por Jemison Santos
