@@ -20,11 +20,11 @@ Para executar este projeto em sua máquina, siga os passos abaixo:
 
 * Levante o servidor, com o comando:
 
-    rails server
+      rails server
 
 * Em seu navegador, acesse
 
-    localhost:3000
+      localhost:3000
 
 _____
 Criado por Jemison Santos
