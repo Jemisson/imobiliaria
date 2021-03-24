@@ -1,8 +1,8 @@
 # Site Imobiliária
 
 ## Informações da configuração da aplicação:
- ** Ruby 2.7.0
- ** Rail 5.2.4
+  Ruby 2.7.0
+  Rail 5.2.4
 
 Para executar este projeto em sua máquina, siga os passos abaixo:
 
@@ -17,3 +17,6 @@ Para executar este projeto em sua máquina, siga os passos abaixo:
 * Execute em seguida:
 
       rails db:create db:migrate
+
+_____
+Criado por Jemison Santos
