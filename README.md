@@ -17,6 +17,8 @@ Para executar este projeto em sua máquina, siga os passos abaixo:
 * Execute em seguida:
 
       rails db:create db:migrate
+      
+* Em seu computador defina seu token de acesso à API na variável ENV['ORULO_TOKEN']
 
 * Levante o servidor, com o comando:
 
