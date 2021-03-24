@@ -26,4 +26,21 @@ $(document).on('turbolinks:load',function(){
   $('.previous_page').text('Anterior');
   $('.next_page').text('Próximo');
 
+  function to_real(value){
+    var emDecimal = (value/100);
+    var strString = emDecimal.toString();
+
+    strString=strString.replace(".", ",");
+    formatado = strString.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+    var resultado ="R$ " + formatado;
+
+    return resultado;
+  };
+
+
+  $('.real').each(function(){
+    $(this).text(to_real($(this).text()));
+  });
+
 })

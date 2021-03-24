@@ -11,8 +11,7 @@ class Site::HomesController < ApplicationController
   end
 
   def building
-    
-
+    @json = params
   end
 
 end

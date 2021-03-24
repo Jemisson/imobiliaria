@@ -1,24 +1,19 @@
-# README
+# Site Imobiliária
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Informações da configuração da aplicação:
+ ** Ruby 2.7.0
+ ** Rail 5.2.4
 
-Things you may want to cover:
+Para executar este projeto em sua máquina, siga os passos abaixo:
 
-* Ruby version
+* Efetue o clone do repositório:
 
-* System dependencies
+      git clone https://github.com/Jemisson/imobiliaria.git
 
-* Configuration
+* Acesse o diretório e execute no terminal:
 
-* Database creation
+      bundle install
 
-* Database initialization
+* Execute em seguida:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+      rails db:create db:migrate

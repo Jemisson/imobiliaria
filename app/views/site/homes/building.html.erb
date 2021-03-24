@@ -1,1 +1,96 @@
+<article class="container">
 
+  <div class="col-lg-12 clearfix">
+
+    <h1 class="home-title line"><%= @json['name'] %></h1>
+
+    <div class="col-lg-6 pull-left no-padding description">
+
+      <h2 class="sub-line">Descrição do imóvel</h2>
+      <p><%= @json['description'] %></p>
+
+      <span>
+        <i class="fa fa-check-circle"></i>
+        Piso: <%= @json['number_of_floors'] %>
+      </span>
+
+      <span>
+        <i class="fa fa-check-circle"></i>
+        Valor: <em class="real"><%= @json['min_price'] %></em>
+      </span>
+
+      <span>
+        <i class="fa fa-check-circle"></i>
+        Imóvel <%= @json['finality'] %> - <%= @json['status'] %>
+      </span>
+
+      <div>
+        <span>
+          <i class="fa fa-map-marker"></i>
+          <%= @json['address']['street_type'] %>,
+          <%= @json['address']['street'] %>,
+          <%= @json['address']['number'] %>,
+          <%= @json['address']['city'] %> -
+          <%= @json['address']['state'] %> -
+          CEP:<%= @json['address']['zip_code'] %>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-lg-6 pull-right">
+
+      <img src="<%= @json['default_image']['520x280'] %>" alt="Imagem do imóvel">
+
+    </div>
+
+  </div>
+
+  <div class="col-lg-12 clearfix">
+
+    <h3 class="sub-line mg-top">Características Físicas</h3>
+
+    <div>
+      <span>
+        <i class="fa fa-check-circle"></i> Área: <%= @json['max_area'] %>m²
+      </span>
+
+      <span>
+        <i class="fa fa-check-circle"></i> Banheiro: <%= @json['max_bathrooms'] %>
+      </span>
+
+      <span>
+        <i class="fa fa-check-circle"></i> Quartos: <%= @json['max_bedrooms'] %>
+      </span>
+      <span>
+        <i class="fa fa-check-circle"></i> Suítes: <%= @json['max_suites'] %>
+      </span>
+      <span>
+        <i class="fa fa-check-circle"></i> Estacionamento: <%= @json['max_parking'] %>
+      </span>
+
+    </div>
+  </div>
+
+  <div class="col-lg-12 mg-top clearfix">
+
+    <h1 class="home-title line"> CONTATE O CORRETOR</h1>
+
+    <div class="col-lg-6 pull-left no-padding">
+      <%= image_tag "man.jpg", class:"pic-man" %>
+    </div>
+
+    <div class="col-lg-6 pull-right no-padding man">
+
+      <span>Lucas Felipe Almeida</span>
+      <span><i class="fa fa-whatsapp"></i> (67) 9 9441-1234</span>
+
+    </div>
+
+    <%= link_to "Voltar", home_path, class:"btn-back-home pull-left" %>
+
+  </div>
+
+
+
+
+</article>

@@ -1,11 +1,11 @@
 <div class="col-lg-12 mg-top clearfix">
 
-  <h1 class="home-title">Meus Favoritos</h1>
-    <% @resp.each do |r| %>
+  <h1 class="home-title line">Meus Favoritos</h1>
+  <% @resp.each do |r| %>
 
-      <% if r['bookmark'] == 'yes' %>
+  <% if bookmark_text(r['bookmark']) %>
 
-        <div class="buildings clearfix">
+      <div class="buildings clearfix">
 
           <div class="card">
 
@@ -32,31 +32,39 @@
             <did class="img-card">
               <img class="card-img-top" src="<%= r['default_image']['520x280'] %>" alt="Card image cap">
             </did>
-            <%= link_to building_path(r), class:"" do %>
 
-            <div class="card-body">
-              <h5 class="card-title"><b><%= r['name'] %></b></h5>
-              <span class="card-text"><%= r['address']['area'] %>, <%= r['address']['city'] %> - <%= r['address']['state'] %></span>
-            </div>
+                <div class="card-body">
 
-            <ul class="list-group list-group-flush">
+                    <h5 class="card-title"><b><%= r['name'] %></b></h5>
+                    <span class="card-text"><%= r['address']['area'] %>, <%= r['address']['city'] %> - <%= r['address']['state'] %></span>
 
-              <li class="list-group-item">
-                <span class="home-block-2 no-padding">Área: <%= r['min_area'] %></span>
-                <span class="home-block-2 no-padding">Imóvel <%= r['status'] %></span>
-              </li>
+                </div>
 
-              <li class="list-group-item">
-                <span class="home-block-3 no-padding"> <i class="fa fa-bed"></i> <%= r['min_bedrooms'] %></span>
-                <span class="home-block-3 no-padding"> <i class="fa fa-bath"></i> <%= r['min_bathrooms'] %></span>
-                <span class="home-block-3 no-padding"> <i class="fa fa-car"></i> <%= r['min_parking'] %></span>
-              </li>
+                <ul class="list-group list-group-flush">
 
-            </ul>
+                  <li class="list-group-item">
+                    <span class="home-block-2 no-padding">Área: <%= r['min_area'] %>m²</span>
+                    <span class="home-block-2 no-padding">Imóvel <%= r['status'] %></span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <span class="home-block-3 no-padding"> <i class="fa fa-bed"></i> <%= r['min_bedrooms'] %></span>
+                    <span class="home-block-3 no-padding"> <i class="fa fa-bath"></i> <%= r['min_bathrooms'] %></span>
+                    <span class="home-block-3 no-padding"> <i class="fa fa-car"></i> <%= r['min_parking'] %></span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <span class="home-block-2 no-padding real"><%= r['min_price'] %></span>
+
+                    <%= link_to building_path(r), class:"" do %>
+                      <span class="home-block-2 btn-more">Ver mais</span>
+                    <% end %>
+                  </li>
+
+                </ul>
 
           </div>
-
-        </div>
-      <% end %>
+      </div>
     <% end %>
+  <% end %>
   </div>

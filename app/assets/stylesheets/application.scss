@@ -25,7 +25,31 @@ nav{
   padding: 0;
   text-align: center;
 }
-
+.real{
+  font-size: 1.8em;
+}
+.authentic{
+  margin-top: 2em;
+}
+.login-title{
+  text-decoration: underline;
+}
+.actions{
+  margin-top: 1.5em;
+}
+.form-control{
+  margin-bottom: 15px;
+}
+.form-login{
+  margin: 0 auto;
+  background: #CCCCCC;
+  padding: 4em;
+  border-radius: 10px;
+}
+.form-login h2{
+  text-align: center;
+  color: #273c75;
+}
 .carousel-top .carousel-caption h5{
   font-size: 2.5em;
 }
@@ -47,7 +71,7 @@ nav{
   color: #273c75;
   margin: 0.8em 0;
 }
-.home-title::after{
+.line::after{
   content: '';
   display: block;
   width: 65px;
@@ -55,11 +79,31 @@ nav{
   background: #273c75;
   margin-top: .3em;
 }
-
-.navbar{
-  // background: red;
+.sub-line{
+  font-size: 1.7em;
+  border-bottom: solid #273c75 2px;
+  line-height: 2em;
+  font-weight: bold;
 }
-
+h3.sub-line ~ div span{
+  padding: 1em 2em;
+}
+h3.sub-line ~ div{
+  line-height: 6em;
+}
+.btn-more{
+  padding: 7px;
+  border: solid 2px #008000;
+  text-align: center;
+  color: #080000;
+}
+.btn-back-home{
+  padding: 7px 50px;
+  border: solid 2px green;
+  text-align: center;
+  color: green;
+  margin-left: 3em;
+}
 .img-card{
   height: 220px;
   overflow: hidden;
@@ -89,7 +133,6 @@ nav{
 .no-padding{
   padding: 0;
 }
-
 .home-block-2,
 .home-block-3{
   float: left;
@@ -113,7 +156,6 @@ nav{
   font-size: 1.8em;
   text-shadow: 2px 2px 2px #000;
 }
-
 .home-star-unmark{
   color: rgba(255,255,255,.4);
   font-size: 1.8em;
@@ -129,7 +171,6 @@ nav{
   width: 100%;
   justify-content: center;
 }
-
 .pagination .previous_page,
 .pagination em.current,
 .pagination a.next_page.disabled,
@@ -147,15 +188,56 @@ nav{
   border-left: none;
   border-radius: 0 5px 5px 0;
 }
-.pagination a.next_page.disabled{
-
-}
-
 .pagination .previous_page{
   border-radius: 5px 0 0 5px;
 }
 .pagination a:active{
   background: #0000ff;
+}
+.description{
+  padding-right: 2em;
+}
+.description span{
+  display: block;
+  margin-bottom: 1em;
+}
+.description span em{
+  font-size: 1em;
+  font-style: normal;
+}
+.fa-map-marker{
+  color: #8c1515;
+}
+.fa-check-circle{
+  color: #008000;
+}
+.fa-map-marker,
+.description p,
+.fa-check-circle,
+.description span,
+h3.sub-line ~ div span{
+  font-size: 1.3em;
+}
+.pic-man{
+  width: 100%;
+}
+.man{
+  padding: 3em;
+}
+.man span{
+  display: block;
+  font-size: 2em;
+}
+.footer{
+  text-align: center;
+  background-color: #222f3e;
+  line-height: 5em;
+  margin-top: 1em;
+}
+.footer span{
+  color: #EEEEEE;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
