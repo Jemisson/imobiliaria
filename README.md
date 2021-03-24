@@ -1,8 +1,8 @@
 # Site Imobiliária
 
 ## Informações da configuração da aplicação:
-  Ruby 2.7.0
-  Rail 5.2.4
+* Ruby 2.7.0
+* Rail 5.2.4
 
 Para executar este projeto em sua máquina, siga os passos abaixo:
 
@@ -25,6 +25,10 @@ Para executar este projeto em sua máquina, siga os passos abaixo:
 * Em seu navegador, acesse
 
       localhost:3000
+      
+* Ah! Não se esqueca de criar o arquivo com suas configuração para o banco de dados PostgreSql:
+      
+      config/database.yml
 
 _____
 Criado por Jemison Santos
